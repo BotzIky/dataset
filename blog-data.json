@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "1747577881885",
+      "title": "nazli eek",
+      "category": "manajemen",
+      "author": "Nazli Paliha Khoiriyah",
+      "content": [
+        {
+          "type": "heading1",
+          "content": "hayoloh bau eek"
+        },
+        {
+          "type": "text",
+          "content": "jadi guys, Nazli bau eek, ni buktinya dibawah"
+        },
+        {
+          "type": "image",
+          "content": "https://raw.githubusercontent.com/BotzIky/dataset/main/images/1747577856274-1000257488-jpg"
+        },
+        {
+          "type": "heading2",
+          "content": "tapi bo'ong "
+        },
+        {
+          "type": "text",
+          "content": "gitulah emang kehidupan guys"
+        }
+      ],
+      "date": "2025-05-18T14:18:00.601Z",
+      "name": "nazli-eek"
+    }
+  ]
+}
