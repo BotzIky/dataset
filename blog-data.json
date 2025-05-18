@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "id": "1747573382241",
+      "title": "test",
+      "category": "test",
+      "author": "Nazli Paliha Khoiriyah",
+      "content": [
+        {
+          "type": "image",
+          "content": "https://raw.githubusercontent.com/BotzIky/dataset/main/images/1747573375856-1000258623-jpg"
+        }
+      ],
+      "date": "2025-05-18T13:03:01.117Z",
+      "name": "test"
+    }
+  ]
+}
