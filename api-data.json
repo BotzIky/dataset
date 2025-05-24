@@ -1,0 +1,124 @@
+[
+  {
+    "path": "/api/anime/list",
+    "method": "GET",
+    "folder": "Anime",
+    "name": "Anime List",
+    "description": "Anime List Otakudesu",
+    "requiresAuth": false,
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/anime/schedule",
+    "method": "GET",
+    "folder": "Anime",
+    "name": "Anime Schedule",
+    "description": "Anime Schedule Otakudesu",
+    "requiresAuth": false,
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/anime/latest",
+    "method": "GET",
+    "folder": "Anime",
+    "name": "Latest Anime",
+    "description": "Latest Anime Otakudesu",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "page": "1 or more"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/anime/genres",
+    "method": "GET",
+    "folder": "Anime",
+    "name": "Genres Anime",
+    "description": "Genres Anime Otakudesu",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "name": "action or more",
+        "page": "1 or more"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/anime/detail",
+    "method": "GET",
+    "folder": "Anime",
+    "name": "Anime Details",
+    "description": "Anime Details Otakudesu",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "link": "link anime ex: /anime/kimi-boku-saigo-senjou-s2-sub-indo"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/anime/watch",
+    "method": "GET",
+    "folder": "Anime",
+    "name": "Watch & Download Anime",
+    "description": "Watch & Download Anime Otakudesu",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "link": "episode link ex: /episode/ejn-episode-1-sub-indo"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/anime/batch",
+    "method": "GET",
+    "folder": "Anime",
+    "name": "Download Batch Anime",
+    "description": "Download Batch Anime Otakudesu",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "batchId": "batchId ex: sai21-batch-sub-indo"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/stats",
+    "method": "GET",
+    "folder": "Info",
+    "name": "Stats Info API",
+    "description": "Status of api usage information",
+    "requiresAuth": false,
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  }
+]
