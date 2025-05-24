@@ -110,11 +110,11 @@
     }
   },
   {
-    "path": "/api/stats",
+    "path": "/api/data",
     "method": "GET",
     "folder": "Info",
-    "name": "Stats Info API",
-    "description": "Status of api usage information",
+    "name": "Data Path API",
+    "description": "Data path information",
     "requiresAuth": false,
     "response": {
       "type": "json",
