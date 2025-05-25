@@ -1,5 +1,25 @@
 [
   {
+    "path": "/api/ai/gpt-4o",
+    "method": "POST",
+    "folder": "AI",
+    "name": "GPT 4o",
+    "description": "AI GPT 4o",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "raw",
+        "fields": {
+          "messages": "messages format"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/anime/list",
     "method": "GET",
     "folder": "Anime",
@@ -116,26 +136,6 @@
     "name": "Data Path API",
     "description": "Data path information",
     "requiresAuth": false,
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
-    "path": "/api/gpt-4o",
-    "method": "POST",
-    "folder": "AI",
-    "name": "GPT 4o",
-    "description": "AI GPT 4o",
-    "requiresAuth": false,
-    "parameters": {
-      "body": {
-        "type": "raw",
-        "fields": {
-          "messages": "messages format"
-        }
-      }
-    },
     "response": {
       "type": "json",
       "example": {}
