@@ -134,7 +134,8 @@
         "fields": {
           "messages": "messages format"
         }
-      },
+      }
+    },
     "response": {
       "type": "json",
       "example": {}
