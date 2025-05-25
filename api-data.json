@@ -120,5 +120,24 @@
       "type": "json",
       "example": {}
     }
+  },
+  {
+    "path": "/api/gpt-4o",
+    "method": "GET",
+    "folder": "AI",
+    "name": "GPT 4o",
+    "description": "AI GPT 4o",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "raw",
+        "fields": {
+          "messages": "messages format"
+        }
+      },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
   }
 ]
