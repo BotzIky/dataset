@@ -20,6 +20,26 @@
     }
   },
   {
+    "path": "/api/ai/image-to-prompt",
+    "method": "POST",
+    "folder": "AI",
+    "name": "Image to Prompt",
+    "description": "AI Image to Prompt",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "formdata",
+        "fields": {
+          "file": "image"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/anime/list",
     "method": "GET",
     "folder": "Anime",
