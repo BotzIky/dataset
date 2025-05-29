@@ -40,6 +40,26 @@
     }
   },
   {
+    "path": "/api/ai/text-to-image",
+    "method": "POST",
+    "folder": "AI",
+    "name": "Text to Image",
+    "description": "AI Text to Image",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "raw",
+        "fields": {
+          "prompt": "prompt to image"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/anime/list",
     "method": "GET",
     "folder": "Anime",
