@@ -20,17 +20,17 @@
     }
   },
   {
-    "path": "/api/ai/image-to-prompt",
+    "path": "/api/ai/blackbox",
     "method": "POST",
     "folder": "AI",
-    "name": "Image to Prompt",
-    "description": "AI Image to Prompt",
+    "name": "BlackBox AI",
+    "description": "Ask to BlackBox AI",
     "requiresAuth": false,
     "parameters": {
       "body": {
-        "type": "formdata",
+        "type": "raw",
         "fields": {
-          "file": "image"
+          "query": "text"
         }
       }
     },
