@@ -50,7 +50,7 @@
       "query": {
         "text": "text to translate",
         "to": "translate to language",
-        "from": "translate from language, default auto",
+        "from": "translate from language, default auto"
       }
     },
     "response": {
