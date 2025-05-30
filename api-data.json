@@ -3,14 +3,14 @@
     "path": "/api/ai/gpt-4o",
     "method": "POST",
     "folder": "AI",
-    "name": "GPT 4o",
-    "description": "AI GPT 4o",
+    "name": "GPT 4.0",
+    "description": "Access GPT-4.0 AI model for chat completion",
     "requiresAuth": false,
     "parameters": {
       "body": {
         "type": "raw",
         "fields": {
-          "messages": "messages format"
+          "messages": "object"
         }
       }
     },
@@ -24,13 +24,13 @@
     "method": "POST",
     "folder": "AI",
     "name": "BlackBox AI",
-    "description": "Ask to BlackBox AI",
+    "description": "Send queries to BlackBox AI for responses",
     "requiresAuth": false,
     "parameters": {
       "body": {
         "type": "raw",
         "fields": {
-          "query": "text"
+          "query": "string"
         }
       }
     },
@@ -48,9 +48,9 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "text": "text to translate",
-        "to": "translate to language",
-        "from": "translate from language, default auto"
+        "text": "string",
+        "to": "string",
+        "from": "string"
       }
     },
     "response": {
@@ -91,7 +91,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "page": "1 or more"
+        "page": "number"
       }
     },
     "response": {
@@ -108,8 +108,8 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "name": "action or more",
-        "page": "1 or more"
+        "name": "string",
+        "page": "number"
       }
     },
     "response": {
@@ -126,7 +126,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "link": "link anime ex: /anime/kimi-boku-saigo-senjou-s2-sub-indo"
+        "link": "string"
       }
     },
     "response": {
@@ -143,7 +143,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "link": "episode link ex: /episode/ejn-episode-1-sub-indo"
+        "link": "string"
       }
     },
     "response": {
@@ -160,7 +160,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "batchId": "batchId ex: sai21-batch-sub-indo"
+        "batchId": "string"
       }
     },
     "response": {
