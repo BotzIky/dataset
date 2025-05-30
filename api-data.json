@@ -40,6 +40,25 @@
     }
   },
   {
+    "path": "/api/tools/translate",
+    "method": "GET",
+    "folder": "Tools",
+    "name": "Translator",
+    "description": "Translate all language",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "text": "text to translate",
+        "to": "translate to language",
+        "from": "translate from language, default auto",
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/anime/list",
     "method": "GET",
     "folder": "Anime",
