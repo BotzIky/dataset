@@ -57,6 +57,40 @@
     }
   },
   {
+    "path": "/api/dl/soundcloud-downloader",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "SoundCloud Downloader",
+    "description": "SoundCloud Audio Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "string"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/search/soundcloud-search",
+    "method": "GET",
+    "folder": "Search",
+    "name": "SoundCloud Search",
+    "description": "SoundCloud audio search title",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "query": "string"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/tools/translate",
     "method": "GET",
     "folder": "Tools",
