@@ -40,6 +40,23 @@
     }
   },
   {
+    "path": "/api/dl/tiktok",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "TikTok Video Downloader",
+    "description": "TikTok Video Downloader no Watermark",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "string"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/tools/translate",
     "method": "GET",
     "folder": "Tools",
