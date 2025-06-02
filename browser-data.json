@@ -6,5 +6,13 @@
       "os": "Linux x86_64",
       "timestamp": "2025-06-02T11:24:58.102Z"
     }
+  },
+  {
+    "visitorId": "ed72a3b9184c3be0560eaba557ba26ac",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Linux; Android 13; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.163 Mobile Safari/537.36",
+      "os": "Linux aarch64",
+      "timestamp": "2025-06-02T11:26:59.155Z"
+    }
   }
 ]
