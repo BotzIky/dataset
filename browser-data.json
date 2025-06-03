@@ -102,5 +102,13 @@
       "os": "iPhone",
       "timestamp": "2025-06-03T16:11:58.443Z"
     }
+  },
+  {
+    "visitorId": "a493e86719e5e321212ea590dab8ddd6",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
+      "os": "Linux x86_64",
+      "timestamp": "2025-06-03T18:50:20.570Z"
+    }
   }
 ]
