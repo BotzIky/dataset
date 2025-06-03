@@ -158,5 +158,13 @@
       "os": "Linux armv81",
       "timestamp": "2025-06-02T16:45:09.084Z"
     }
+  },
+  {
+    "visitorId": "80b3206364daa5a228852b8f9936f1ee",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "os": "Win32",
+      "timestamp": "2025-06-03T04:17:29.185Z"
+    }
   }
 ]
