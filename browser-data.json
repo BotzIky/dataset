@@ -22,5 +22,13 @@
       "os": "Linux x86_64",
       "timestamp": "2025-06-03T10:00:50.674Z"
     }
+  },
+  {
+    "visitorId": "5502601af9e2de29bae77fe8e4be3d8f",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Linux; Android 11.0; Surface Duo) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.105 Mobile Safari/537.36",
+      "os": "Linux armv8l",
+      "timestamp": "2025-06-03T10:32:28.782Z"
+    }
   }
 ]
