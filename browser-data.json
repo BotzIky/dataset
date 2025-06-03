@@ -70,5 +70,13 @@
       "os": "Win32",
       "timestamp": "2025-06-03T12:36:36.140Z"
     }
+  },
+  {
+    "visitorId": "5164fb7a504b43bcb5b2644556a4dcdc",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0",
+      "os": "Win32",
+      "timestamp": "2025-06-03T12:40:09.512Z"
+    }
   }
 ]
