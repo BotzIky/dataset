@@ -54,5 +54,13 @@
       "os": "Linux x86_64",
       "timestamp": "2025-06-03T12:11:44.739Z"
     }
+  },
+  {
+    "visitorId": "04190c6c5e6e5aa404a3eaa5a6dff3da",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0",
+      "os": "Win32",
+      "timestamp": "2025-06-03T12:29:12.158Z"
+    }
   }
 ]
