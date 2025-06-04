@@ -57,15 +57,15 @@
     }
   },
   {
-    "path": "/api/dl/soundcloud-downloader",
+    "path": "/api/soundcloud/search",
     "method": "GET",
-    "folder": "Downloader",
-    "name": "SoundCloud Downloader",
-    "description": "SoundCloud Audio Downloader",
+    "folder": "SoundCloud",
+    "name": "SoundCloud Search",
+    "description": "SoundCloud audio search title",
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "url": "string"
+        "query": "string"
       }
     },
     "response": {
@@ -74,15 +74,32 @@
     }
   },
   {
-    "path": "/api/search/soundcloud-search",
+    "path": "/api/soundcloud/home",
     "method": "GET",
-    "folder": "Search",
-    "name": "SoundCloud Search",
-    "description": "SoundCloud audio search title",
+    "folder": "SoundCloud",
+    "name": "SoundCloud Dashboard",
+    "description": "SoundCloud Dashboard Interface",
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "query": "string"
+        "limit": "number"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/soundcloud/downloader",
+    "method": "GET",
+    "folder": "SoundCloud",
+    "name": "SoundCloud Downloader",
+    "description": "SoundCloud Audio Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "string"
       }
     },
     "response": {
