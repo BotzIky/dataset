@@ -166,5 +166,13 @@
       "os": "Linux armv8l",
       "timestamp": "2025-06-04T12:36:30.343Z"
     }
+  },
+  {
+    "visitorId": "83a0732ceaae423e906a915e7cd59120",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Linux; Android 12; SM-A125F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/137.0.7151.52 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/515.1.0.62.90;IABMV/1;]",
+      "os": "Linux armv8l",
+      "timestamp": "2025-06-04T12:37:36.938Z"
+    }
   }
 ]
