@@ -206,5 +206,13 @@
       "os": "Linux aarch64",
       "timestamp": "2025-06-04T13:10:04.517Z"
     }
+  },
+  {
+    "visitorId": "e3efeafd674993aa037c78a4ddee7651",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Linux; Android 15; TECNO CLA5 Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.7103.127 Mobile Safari/537.36",
+      "os": "Linux aarch64",
+      "timestamp": "2025-06-04T13:10:35.161Z"
+    }
   }
 ]
