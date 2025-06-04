@@ -150,5 +150,13 @@
       "os": "Linux armv81",
       "timestamp": "2025-06-04T12:00:43.452Z"
     }
+  },
+  {
+    "visitorId": "a1b1efda9f07059be1c536c9008be73d",
+    "browserData": {
+      "browser": "Dalvik/2.1.0 (Linux; U; Android 12; SM-M325FV Build/SP1A.210812.016) [FBAN/FB4A;FBAV/433.0.0.31.111;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/517982201;FBCR/Ethio telecom;FBMF/samsung;FBBD/samsung;FBDV/SM-M325FV;FBSV/12;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2187};FB_FW/1;FBRV/521739217;] FBBK/1",
+      "os": "Linux armv8l",
+      "timestamp": "2025-06-04T12:35:59.355Z"
+    }
   }
 ]
