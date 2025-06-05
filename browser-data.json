@@ -230,5 +230,13 @@
       "os": "MacIntel",
       "timestamp": "2025-06-05T11:05:19.063Z"
     }
+  },
+  {
+    "visitorId": "000d04dbeb5da8311ee10a1cd395746e",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",
+      "os": "Win32",
+      "timestamp": "2025-06-05T16:54:17.264Z"
+    }
   }
 ]
