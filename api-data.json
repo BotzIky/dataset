@@ -126,6 +126,7 @@
       "example": {}
     }
   },
+  {
     "path": "/api/tools/transcript",
     "method": "POST",
     "folder": "Tools",
@@ -133,7 +134,7 @@
     "description": "Transcript video YouTube",
     "requiresAuth": false,
     "parameters": {
-      "query": {
+      "body": {
         "videoId": "string",
         "videoUrl": "string"
       }
