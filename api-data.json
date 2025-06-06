@@ -126,6 +126,23 @@
       "example": {}
     }
   },
+    "path": "/api/tools/transcript",
+    "method": "POST",
+    "folder": "Tools",
+    "name": "Transcript YouTube",
+    "description": "Transcript video YouTube",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "videoId": "string",
+        "videoUrl": "string"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
   {
     "path": "/api/anime/list",
     "method": "GET",
