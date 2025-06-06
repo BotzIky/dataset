@@ -278,5 +278,13 @@
       "os": "Linux x86_64",
       "timestamp": "2025-06-06T15:50:14.317Z"
     }
+  },
+  {
+    "visitorId": "64eaeeee69fe49ec9d16f30960f2ccda",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",
+      "os": "Win32",
+      "timestamp": "2025-06-06T19:22:20.954Z"
+    }
   }
 ]
