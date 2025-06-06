@@ -134,9 +134,12 @@
     "description": "Transcript video YouTube",
     "requiresAuth": false,
     "parameters": {
+      "type": "raw",
       "body": {
-        "videoId": "string",
-        "videoUrl": "string"
+        "fields": {
+          "videoId": "string",
+          "videoUrl": "string"
+        }
       }
     },
     "response": {
