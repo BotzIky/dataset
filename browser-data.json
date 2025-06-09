@@ -342,5 +342,13 @@
       "os": "iPhone",
       "timestamp": "2025-06-09T12:24:54.589Z"
     }
+  },
+  {
+    "visitorId": "02d0fbb2311fd7b0f7e13a21f947819d",
+    "browserData": {
+      "browser": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Mobile/15E148 Safari/604.1",
+      "os": "iPhone",
+      "timestamp": "2025-06-09T12:28:35.152Z"
+    }
   }
 ]
