@@ -438,5 +438,13 @@
       "os": "Linux armv81",
       "timestamp": "2025-06-16T08:09:37.180Z"
     }
+  },
+  {
+    "visitorId": "c19210099866c7ce68180cd8766f3587",
+    "browserData": {
+      "browser": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1",
+      "os": "iPhone",
+      "timestamp": "2025-06-16T15:56:27.581Z"
+    }
   }
 ]
