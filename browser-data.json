@@ -486,5 +486,13 @@
       "os": "Linux armv81",
       "timestamp": "2025-06-18T12:32:21.667Z"
     }
+  },
+  {
+    "visitorId": "BotzAku",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Linux; Android 13; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.163 Mobile Safari/537.36",
+      "os": "Linux aarch64",
+      "timestamp": "2025-06-18T12:33:48.024Z"
+    }
   }
 ]
