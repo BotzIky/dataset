@@ -495,5 +495,13 @@
       "timestamp": "2025-06-18T12:33:48.024Z"
     }
   },
-  {}
+  {},
+  {
+    "visitorId": "d132b1f600907e5316b85f647e993455",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0",
+      "os": "Win32",
+      "timestamp": "2025-06-19T08:10:25.666Z"
+    }
+  }
 ]
