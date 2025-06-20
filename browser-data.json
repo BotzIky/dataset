@@ -511,5 +511,13 @@
       "os": "MacIntel",
       "timestamp": "2025-06-20T07:35:25.497Z"
     }
+  },
+  {
+    "visitorId": "ebbdec318141d6725fe58dc9b9c2e19e",
+    "browserData": {
+      "browser": "vercel-screenshot/1.0",
+      "os": "Linux x86_64",
+      "timestamp": "2025-06-20T07:41:49.596Z"
+    }
   }
 ]
