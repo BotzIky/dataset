@@ -599,5 +599,13 @@
       "os": "Win32",
       "timestamp": "2025-06-21T15:30:15.249Z"
     }
+  },
+  {
+    "visitorId": "7497e69c78dd4e661ba83b13a6a1beb8",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+      "os": "Linux x86_64",
+      "timestamp": "2025-06-21T20:15:35.308Z"
+    }
   }
 ]
