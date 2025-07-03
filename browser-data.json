@@ -743,5 +743,13 @@
       "os": "Linux armv8l",
       "timestamp": "2025-07-02T10:11:19.574Z"
     }
+  },
+  {
+    "visitorId": "25cd9f5460bf6bf9c563cdc37d3231a6",
+    "browserData": {
+      "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "os": "Linux x86_64",
+      "timestamp": "2025-07-03T10:33:23.722Z"
+    }
   }
 ]
