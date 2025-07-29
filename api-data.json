@@ -69,6 +69,74 @@
     }
   },
   {
+    "path": "/api/dl/facebook",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "Facebook Downloader",
+    "description": "Facebook Video/Audio Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://www.facebook.com/share/r/19SU2T3AZp/"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/dl/pinterest",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "Pinterest Downloader",
+    "description": "Pinterest Video Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://pin.it/7mO3ZoAY6"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/dl/threads",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "Threads Downloader",
+    "description": "Threads Video/Photo Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://www.threads.com/@hesti_yessi946/post/DMrcveQhAVZ?xmt=AQF0-1MePJ5yyx3La4vhrW8g1PAhw_qajKMU8R4yHfKzEw"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/dl/x",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "X Downloader",
+    "description": "X Video Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://x.com/Chudai_jav_L91U/status/1950165115317149788?t=g9PVXrcYB-mNoybmy1foMQ&s=19"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/soundcloud/search",
     "method": "GET",
     "folder": "SoundCloud",
