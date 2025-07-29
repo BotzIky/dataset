@@ -342,7 +342,8 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "page": "10"
+        "query": "Laut Tengah",
+        "page": "1"
       }
     },
     "response": {
