@@ -41,7 +41,7 @@
         "type": "raw",
         "fields": {
           "prompt": "Siapa presiden Indonesia",
-          "model": "Perplexity AI"
+          "modelKey": "Perplexity AI"
         }
       }
     },
