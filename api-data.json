@@ -30,6 +30,24 @@
     }
   },
   {
+    "path": "/api/dl/youtube",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "YouTube Downloader",
+    "description": "YouTube Video/Audio Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://youtu.be/F-DNqANxm60?si=j0G4-cJuLYq9dDHw",
+        "format": "mp3"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/soundcloud/search",
     "method": "GET",
     "folder": "SoundCloud",
