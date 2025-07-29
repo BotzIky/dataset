@@ -30,17 +30,18 @@
     }
   },
   {
-    "path": "/api/ai/summarize",
+    "path": "/api/ai/askai",
     "method": "POST",
     "folder": "AI",
-    "name": "Summarize Text",
-    "description": "Summarize your text with AI",
+    "name": "AskAI",
+    "description": "Ask question to AI with many models",
     "requiresAuth": false,
     "parameters": {
       "body": {
         "type": "raw",
         "fields": {
-          "text": "Pendaftaran Internet Murah 100 Mbps Dibuka, Cek Pengumuman Komdigi Intan Rakhmayanti Dewi, CNBC Indonesia 28 July 2025 11:50 Foto: Gerai warung kopi di Tangerang Selatan menyediakan fasilitas internet gratis untuk membantu para pelajar mengikuti belajar daring. Kamis, (30/7/20). (CNBC Indonesia/Tri Susilo) Jakarta, CNBC Indonesia - Kementerian Komunikasi dan Digital (Komdigi) resmi membuka seleksi pengguna pita frekuensi 1,4 GHz untuk layanan akses internet tetap berbasis nirkabel atau Broadband Wireless Access (BWA). Seleksi ini bertujuan untuk menentukan pengguna pita frekuensi 1,4 GHz di seluruh regional sesuai Permen Komdigi No. 13 Tahun 2025. Langkah ini ditempuh untuk memperluas jangkauan internet berbasis jaringan pitalebar tetap (fixed broadband) yang terjangkau di seluruh Indonesia, serta meningkatkan pembangunan infrastruktur jaringan seperti fiber optik." 
+          "prompt": "Siapa presiden Indonesia",
+          "model": "Perplexity AI"
         }
       }
     },
