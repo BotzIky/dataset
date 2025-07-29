@@ -1,6 +1,6 @@
 [
   {
-    "path": "/api/ai/gpt-4o",
+    "path": "/api/ai/gpt4",
     "method": "POST",
     "folder": "AI",
     "name": "GPT 4.0",
