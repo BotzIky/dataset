@@ -10,7 +10,17 @@
       "body": {
         "type": "raw",
         "fields": {
-          "messages": "object"
+          "messages": [
+            {
+              "role": "system",
+              "content": "Good Person"
+            },
+            {
+              "role": "user",
+              "content": "hai"
+            }
+          ],
+          "user_id": "1234"
         }
       }
     },
@@ -30,7 +40,7 @@
       "body": {
         "type": "raw",
         "fields": {
-          "query": "string"
+          "query": "hai"
         }
       }
     },
@@ -48,7 +58,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "url": "string"
+        "url": "https://vt.tiktok.com/ZSS6xwKAd/"
       }
     },
     "response": {
@@ -65,7 +75,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "query": "string"
+        "query": "Sigar Denny Caknan"
       }
     },
     "response": {
@@ -82,7 +92,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "limit": "number"
+        "limit": "10"
       }
     },
     "response": {
@@ -99,7 +109,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "url": "string"
+        "url": "https://soundcloud.com/andy-setyaputra/denny-caknan-sigar"
       }
     },
     "response": {
@@ -116,9 +126,9 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "text": "string",
-        "to": "string",
-        "from": "string"
+        "text": "aku suka kamu",
+        "to": "en",
+        "from": "id"
       }
     },
     "response": {
@@ -137,8 +147,8 @@
       "type": "raw",
       "body": {
         "fields": {
-          "videoId": "string",
-          "videoUrl": "string"
+          "videoId": "8onRFQ9qnhs",
+          "videoUrl": "https://youtu.be/8onRFQ9qnhs?si=OQg6fESoS6bZkGZR"
         }
       }
     },
@@ -180,7 +190,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "page": "number"
+        "page": "2"
       }
     },
     "response": {
@@ -197,8 +207,8 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "name": "string",
-        "page": "number"
+        "name": "action",
+        "page": "2"
       }
     },
     "response": {
@@ -215,7 +225,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "link": "string"
+        "link": "/anime/watanare-sub-indo"
       }
     },
     "response": {
@@ -232,7 +242,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "link": "string"
+        "link": "/episode/ejn-episode-1-sub-indo"
       }
     },
     "response": {
@@ -249,7 +259,7 @@
     "requiresAuth": false,
     "parameters": {
       "query": {
-        "batchId": "string"
+        "batchId": "sai21-batch-sub-indo"
       }
     },
     "response": {
