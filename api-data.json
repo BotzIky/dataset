@@ -266,6 +266,183 @@
     }
   },
   {
+    "path": "/api/film/popular",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Popular Film",
+    "description": "List Popular Film",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "page": "1"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/top-rated",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Top Rated Film",
+    "description": "List Top Rated Film",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "page": "1"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/trending",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Trending Film",
+    "description": "List Trending Film",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "page": "1"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/upcoming",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Upcoming Film",
+    "description": "List Upcoming Film",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "page": "1"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/search",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Search Film",
+    "description": "Search Film to List",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "page": "10"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/list",
+    "method": "GET",
+    "folder": "Film",
+    "name": "List Film",
+    "description": "List All Film",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "page": "1"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/genres",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Genres Film",
+    "description": "List genre Film",
+    "requiresAuth": false,
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/detail",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Detail Film",
+    "description": "Detail Film/Movie",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "movieId": "1466857"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/credits",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Credits Film",
+    "description": "List Credits Film",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "movieId": "1466857"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/recommended",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Recommended Film",
+    "description": "List Recommended Film",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "movieId": "1466857"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/film/server",
+    "method": "GET",
+    "folder": "Film",
+    "name": "Server Film",
+    "description": "List Server Film",
+    "requiresAuth": false,
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/api/soundcloud/search",
     "method": "GET",
     "folder": "SoundCloud",
