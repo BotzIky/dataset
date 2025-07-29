@@ -230,17 +230,5 @@
       "type": "json",
       "example": {}
     }
-  },
-  {
-    "path": "/api/data",
-    "method": "GET",
-    "folder": "Info",
-    "name": "Data Path API",
-    "description": "Data path information",
-    "requiresAuth": false,
-    "response": {
-      "type": "json",
-      "example": {}
-    }
   }
 ]
