@@ -124,7 +124,7 @@
     "method": "GET",
     "folder": "Downloader",
     "name": "X Downloader",
-    "description": "X Video Downloader",
+    "description": "X Video/Photo/Audio Downloader",
     "requiresAuth": false,
     "parameters": {
       "query": {
