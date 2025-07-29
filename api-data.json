@@ -30,43 +30,6 @@
     }
   },
   {
-    "path": "/api/ai/blackbox",
-    "method": "POST",
-    "folder": "AI",
-    "name": "BlackBox AI",
-    "description": "Send queries to BlackBox AI for responses",
-    "requiresAuth": false,
-    "parameters": {
-      "body": {
-        "type": "raw",
-        "fields": {
-          "query": "hai"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
-    "path": "/api/dl/tiktok",
-    "method": "GET",
-    "folder": "Downloader",
-    "name": "TikTok Video Downloader",
-    "description": "TikTok Video Downloader no Watermark",
-    "requiresAuth": false,
-    "parameters": {
-      "query": {
-        "url": "https://vt.tiktok.com/ZSS6xwKAd/"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
     "path": "/api/soundcloud/search",
     "method": "GET",
     "folder": "SoundCloud",
@@ -76,23 +39,6 @@
     "parameters": {
       "query": {
         "query": "Sigar Denny Caknan"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
-    "path": "/api/soundcloud/home",
-    "method": "GET",
-    "folder": "SoundCloud",
-    "name": "SoundCloud Dashboard",
-    "description": "SoundCloud Dashboard Interface",
-    "requiresAuth": false,
-    "parameters": {
-      "query": {
-        "limit": "10"
       }
     },
     "response": {
@@ -129,27 +75,6 @@
         "text": "aku suka kamu",
         "to": "en",
         "from": "id"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
-    "path": "/api/tools/transcript",
-    "method": "POST",
-    "folder": "Tools",
-    "name": "Transcript YouTube",
-    "description": "Transcript video YouTube",
-    "requiresAuth": false,
-    "parameters": {
-      "type": "raw",
-      "body": {
-        "fields": {
-          "videoId": "8onRFQ9qnhs",
-          "videoUrl": "https://youtu.be/8onRFQ9qnhs?si=OQg6fESoS6bZkGZR"
-        }
       }
     },
     "response": {
