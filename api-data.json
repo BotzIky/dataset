@@ -137,40 +137,6 @@
     }
   },
   {
-    "path": "/api/soundcloud/search",
-    "method": "GET",
-    "folder": "SoundCloud",
-    "name": "SoundCloud Search",
-    "description": "SoundCloud audio search title",
-    "requiresAuth": false,
-    "parameters": {
-      "query": {
-        "query": "Sigar Denny Caknan"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
-    "path": "/api/soundcloud/downloader",
-    "method": "GET",
-    "folder": "SoundCloud",
-    "name": "SoundCloud Downloader",
-    "description": "SoundCloud Audio Downloader",
-    "requiresAuth": false,
-    "parameters": {
-      "query": {
-        "url": "https://soundcloud.com/andy-setyaputra/denny-caknan-sigar"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
     "path": "/api/tools/translate",
     "method": "GET",
     "folder": "Tools",
@@ -292,6 +258,40 @@
     "parameters": {
       "query": {
         "batchId": "sai21-batch-sub-indo"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/soundcloud/search",
+    "method": "GET",
+    "folder": "SoundCloud",
+    "name": "SoundCloud Search",
+    "description": "SoundCloud audio search title",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "query": "Sigar Denny Caknan"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/api/soundcloud/downloader",
+    "method": "GET",
+    "folder": "SoundCloud",
+    "name": "SoundCloud Downloader",
+    "description": "SoundCloud Audio Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://soundcloud.com/andy-setyaputra/denny-caknan-sigar"
       }
     },
     "response": {
