@@ -831,5 +831,13 @@
       "os": "Win32",
       "timestamp": "2025-07-18T22:46:33.542Z"
     }
+  },
+  {
+    "visitorId": "bcd08e7c64db4dae1f1481b6d9c72469",
+    "browserData": {
+      "browser": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/28.0 Chrome/130.0.0.0 Mobile Safari/537.36",
+      "os": "Linux armv81",
+      "timestamp": "2025-07-31T16:24:43.768Z"
+    }
   }
 ]
