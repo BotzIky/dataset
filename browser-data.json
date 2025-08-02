@@ -855,5 +855,13 @@
       "os": "Linux x86_64",
       "timestamp": "2025-08-02T17:37:05.696Z"
     }
+  },
+  {
+    "visitorId": "da1c45c41290276eb35b09cbc4040acf",
+    "browserData": {
+      "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/125.0.6422.60 Safari/537.36",
+      "os": "Linux x86_64",
+      "timestamp": "2025-08-02T17:37:21.727Z"
+    }
   }
 ]
