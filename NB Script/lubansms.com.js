@@ -208,7 +208,7 @@ const luban = {
       return {
         success: false,
         code: error?.response?.status || 500,
-        result: { error: 'Beuhh... error bree 🤙🏻😏' }
+        result: { error: 'Beuhh... error bree' }
       };
     }
   }
