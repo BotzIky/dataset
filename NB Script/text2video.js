@@ -1,14 +1,13 @@
 import axios from 'axios';
 import chalk from 'chalk';
-import FormData from 'form-data';
 
 const aiLabs = {
   api: {
-    base: 'https://text2video.aritek.app',
+    base: 'https://text2pet.zdex.top',
     endpoints: {
-      text2img: '/text2img',
-      generate: '/txt2videov3',
-      video: '/video'
+      images: '/images',
+      videos: '/videos',
+      videosBatch: '/videos/batch'
     }
   },
 
@@ -67,22 +66,15 @@ const aiLabs = {
       };
     }
 
-    const token = await aiLabs.setup.decrypt();
-    const form = new FormData();
-    form.append('prompt', prompt);
-    form.append('token', token);
+    await aiLabs.setup.decrypt();
+    const payload = { prompt };
 
     try {
-      const url = aiLabs.api.base + aiLabs.api.endpoints.text2img;
-      const res = await axios.post(url, form, {
-        headers: {
-          ...aiLabs.headers,
-          ...form.getHeaders()
-        }
-      });
+      const url = aiLabs.api.base + aiLabs.api.endpoints.images;
+      const res = await axios.post(url, payload, { headers: aiLabs.headers });
 
-      const { code, url: imageUrl } = res.data;
-      if (code !== 0 || !imageUrl) {
+      const { code, data, prompt: isPrompt } = res.data;
+      if (code !== 0 || !data) {
         console.log(chalk.yellow('Horreee ✌🏻 Generate imagenya gagal bree wkwk'));
         return {
           success: false,
@@ -98,8 +90,8 @@ const aiLabs = {
         success: true,
         code: res.status,
         result: {
-          url: imageUrl.trim(),
-          prompt
+          url: data,
+          prompt: isPrompt || prompt 
         }
       };
     } catch (err) {
@@ -123,7 +115,7 @@ const aiLabs = {
         }
       };
     }
- 
+
     if (!/^(image|video)$/.test(type)) {
       return {
         success: false,
@@ -134,7 +126,7 @@ const aiLabs = {
       };
     }
 
-    console.log(chalk.cyan(`📡 Lagi connect ke Server AInya nih type ${type}...`));
+    console.log(chalk.cyan(`📡 Lagi connect ke Server AInya nih untuk ${type}...`));
 
     if (type === 'image') {
       return await aiLabs.text2img(prompt);
@@ -145,11 +137,11 @@ const aiLabs = {
         isPremium,
         prompt,
         used: [],
-        versionCode: 59
+        versionCode: 6
       };
 
       try {
-        const url = aiLabs.api.base + aiLabs.api.endpoints.generate;
+        const url = aiLabs.api.base + aiLabs.api.endpoints.videos;
         const res = await axios.post(url, payload, { headers: aiLabs.headers });
 
         const { code, key } = res.data;
@@ -163,6 +155,7 @@ const aiLabs = {
             }
           };
         }
+
         return await aiLabs.video(key);
       } catch (err) {
         console.log(chalk.red('Walah... Kagak bisa connect ke Server APInya bree 😂 '));
@@ -191,7 +184,7 @@ const aiLabs = {
 
     await aiLabs.setup.decrypt();
     const payload = { keys: [key] };
-    const url = aiLabs.api.base + aiLabs.api.endpoints.video;
+    const url = aiLabs.api.base + aiLabs.api.endpoints.videosBatch;
     const maxAttempts = 100;
     const delay = 2000;
     let attempt = 0;
@@ -211,14 +204,14 @@ const aiLabs = {
         if (code === 0 && Array.isArray(datas) && datas.length > 0) {
           const data = datas[0];
           if (!data.url || data.url.trim() === '') {
-            const progress = parseFloat(data.progress || 0);
-            const pi = Math.round(progress);
+            const progress = parseFloat(data.progress || 0) || (attempt / maxAttempts) * 100; 
+            const progressInt = Math.round(progress);
             const barLength = 20;
-            const filled = Math.floor(pi / 5);
+            const filled = Math.floor(progressInt / 5);
             const bar = '█'.repeat(filled) + '░'.repeat(barLength - filled);
 
             if (progress !== lastProgress) {
-              process.stdout.write(chalk.cyan(`\r⚡ Generating: [${bar}] ${pi}%`));
+              process.stdout.write(chalk.cyan(`\r⚡ Generating: [${bar}] ${progressInt}%`));
               lastProgress = progress;
             }
             await new Promise(r => setTimeout(r, delay));
@@ -234,13 +227,14 @@ const aiLabs = {
               url: data.url.trim(),
               safe: data.safe === 'true',
               key: data.key,
+              video_id: data.video_id,
               progress: '100%'
             }
           };
         }
       } catch (err) {
-        const retry = ['ECONNRESET', 'ECONNABORTED', 'ETIMEDOUT'].includes(err.code);
-        if (retry && attempt < maxAttempts) {
+        const isRetryable = ['ECONNRESET', 'ECONNABORTED', 'ETIMEDOUT'].includes(err.code);
+        if (isRetryable && attempt < maxAttempts) {
           process.stdout.write(chalk.yellow(`\rLemot bet dah... coba (${attempt}/${maxAttempts}) aja lagi yak 😂`));
           await new Promise(r => setTimeout(r, delay));
           continue;
