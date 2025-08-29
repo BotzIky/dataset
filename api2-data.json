@@ -1,0 +1,86 @@
+[
+  {
+    "path": "/ai/gpt4",
+    "method": "POST",
+    "folder": "AI",
+    "name": "GPT 4.0",
+    "description": "Access GPT-4.0 AI model for chat completion",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "raw",
+        "fields": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Good Person"
+            },
+            {
+              "role": "user",
+              "content": "hai"
+            }
+          ],
+          "user_id": "1234"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/file/upload",
+    "method": "POST",
+    "folder": "Tools",
+    "name": "Uploader",
+    "description": "Upload file to url with ease",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "form-data",
+        "fields": {
+          "file": "@/sdcard/Download/contoh.mp4"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/download/facebook",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "Facebook Downloader",
+    "description": "Facebook Video/Audio Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://www.facebook.com/share/r/19SU2T3AZp/"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/download/pinterest",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "Pinterest Downloader",
+    "description": "Pinterest Video Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://pin.it/7mO3ZoAY6"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  }
+]
