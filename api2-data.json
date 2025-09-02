@@ -59,11 +59,11 @@
     }
   },
   {
-    "path": "/ai/omni-moderation-latest",
+    "path": "/ai/whisper-1",
     "method": "POST",
     "folder": "AI",
-    "name": "Omni Moderation Latest",
-    "description": "Access omni-moderation-latest AI model for audio transcript",
+    "name": "Whisper 1",
+    "description": "Access whisper-1 AI model for audio transcript",
     "requiresAuth": false,
     "parameters": {
       "body": {
