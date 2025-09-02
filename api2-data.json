@@ -30,6 +30,26 @@
     }
   },
   {
+    "path": "/ai/dall-e-3",
+    "method": "POST",
+    "folder": "AI",
+    "name": "Dall-e-3",
+    "description": "Access dall-e-3 AI model for create images",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "raw",
+        "fields": {
+          "prompt": "cat"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/file/upload",
     "method": "POST",
     "folder": "Tools",
