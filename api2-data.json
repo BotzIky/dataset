@@ -99,26 +99,6 @@
     }
   },
   {
-    "path": "/file/upload",
-    "method": "POST",
-    "folder": "Tools",
-    "name": "Uploader",
-    "description": "Upload file to url with ease",
-    "requiresAuth": false,
-    "parameters": {
-      "body": {
-        "type": "form-data",
-        "fields": {
-          "file": "@/sdcard/Download/contoh.mp4"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
     "path": "/download/facebook",
     "method": "GET",
     "folder": "Downloader",
@@ -147,6 +127,38 @@
         "url": "https://pin.it/7mO3ZoAY6"
       }
     },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/file/upload",
+    "method": "POST",
+    "folder": "Tools",
+    "name": "Uploader",
+    "description": "Upload file to url with ease",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "form-data",
+        "fields": {
+          "file": "@/sdcard/Download/contoh.mp4"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/data/bot-server",
+    "method": "POST",
+    "folder": "Service",
+    "name": "Bot Server",
+    "description": "Check active bot server",
+    "requiresAuth": false,
     "response": {
       "type": "json",
       "example": {}
