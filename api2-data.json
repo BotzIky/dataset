@@ -154,10 +154,34 @@
   },
   {
     "path": "/data/bot-server",
-    "method": "POST",
+    "method": "GET",
     "folder": "Service",
     "name": "Bot Server",
     "description": "Check active bot server",
+    "requiresAuth": false,
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/data/server",
+    "method": "GET",
+    "folder": "Service",
+    "name": "Web Server",
+    "description": "Check website server status",
+    "requiresAuth": false,
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/data/data",
+    "method": "GET",
+    "folder": "Service",
+    "name": "Api Path",
+    "description": "Bruh...",
     "requiresAuth": false,
     "response": {
       "type": "json",
