@@ -30,27 +30,6 @@
     }
   },
   {
-    "path": "/api/ai/askai",
-    "method": "POST",
-    "folder": "AI",
-    "name": "AskAI",
-    "description": "Ask question to AI with many models",
-    "requiresAuth": false,
-    "parameters": {
-      "body": {
-        "type": "raw",
-        "fields": {
-          "prompt": "Siapa presiden Indonesia",
-          "modelKey": "Perplexity AI"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
     "path": "/api/dl/facebook",
     "method": "GET",
     "folder": "Downloader",
