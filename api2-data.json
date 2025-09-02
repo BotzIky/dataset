@@ -59,6 +59,26 @@
     }
   },
   {
+    "path": "/ai/omni-moderation-latest",
+    "method": "POST",
+    "folder": "AI",
+    "name": "Omni Moderation Latest",
+    "description": "Access omni-moderation-latest AI model for audio transcript",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "form-data",
+        "fields": {
+          "audio": "@/sdcard/Download/contoh.mp3"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/ai/dall-e-3",
     "method": "POST",
     "folder": "AI",
