@@ -3,8 +3,8 @@
     "path": "/ai/gpt4",
     "method": "POST",
     "folder": "AI",
-    "name": "GPT 4.0",
-    "description": "Access GPT-4.0 AI model for chat completion",
+    "name": "GPT-4",
+    "description": "Access GPT-4 AI model for chat completion",
     "requiresAuth": false,
     "parameters": {
       "body": {
@@ -21,6 +21,35 @@
             }
           ],
           "user_id": "1234"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/ai/gpt-4o",
+    "method": "POST",
+    "folder": "AI",
+    "name": "GPT-4o",
+    "description": "Access GPT-4o AI model for chat completion",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "raw",
+        "fields": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Good Person"
+            },
+            {
+              "role": "user",
+              "content": "hai"
+            }
+          ]
         }
       }
     },
