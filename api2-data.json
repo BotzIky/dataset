@@ -64,6 +64,24 @@
     }
   },
   {
+    "path": "/tools/translate",
+    "method": "GET",
+    "folder": "Tools",
+    "name": "Translator",
+    "description": "Translate any text you want",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "text": "aku suka kamu" ,
+        "to": "en"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/file/upload",
     "method": "POST",
     "folder": "Tools",
