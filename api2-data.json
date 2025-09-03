@@ -47,6 +47,23 @@
     }
   },
   {
+    "path": "/download/threads",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "Threads Downloader",
+    "description": "Threads Video/Photo Downloader",
+    "requiresAuth": true,
+    "parameters": {
+      "query": {
+        "url": "https://www.threads.com/@botzaku/post/DNfndDYzcuF?xmt=AQF0ksKVn_htYsxeVk6jHiidnYHZ5_ezN3oQV8CjwemGNQ&slof=1"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/download/pinterest",
     "method": "GET",
     "folder": "Downloader",
