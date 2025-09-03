@@ -82,6 +82,23 @@
     }
   },
   {
+    "path": "/soundcloud/search",
+    "method": "GET",
+    "folder": "Music",
+    "name": "Soundcloud Track Search",
+    "description": "Find your favorite songs on SoundCloud",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "query": "Sigar"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/file/upload",
     "method": "POST",
     "folder": "Tools",
