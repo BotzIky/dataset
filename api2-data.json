@@ -99,6 +99,23 @@
     }
   },
   {
+    "path": "/soundcloud/download",
+    "method": "GET",
+    "folder": "Music",
+    "name": "Soundcloud Track Downloader",
+    "description": "Download your favorite songs on SoundCloud",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://soundcloud.com/shintaarsinta/sigar-2"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/file/upload",
     "method": "POST",
     "folder": "Tools",
