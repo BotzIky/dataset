@@ -64,6 +64,23 @@
     }
   },
   {
+    "path": "/download/x",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "X Downloader",
+    "description": "X Video/Audio Downloader",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://x.com/Yoda4ever/status/1963341228910489923?t=KUQXWkYF-3IwLC_KN6SNeA&s=19"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/download/pinterest",
     "method": "GET",
     "folder": "Downloader",
