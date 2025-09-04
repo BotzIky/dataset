@@ -533,7 +533,7 @@
   {
     "path": "/db/collection-find",
     "method": "POST",
-    "folder": "Server",
+    "folder": "Database",
     "name": "Collection Find",
     "description": "Same as Collection Find but using JSON body for complex filters.",
     "requiresAuth": true,
