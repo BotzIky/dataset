@@ -589,7 +589,7 @@
   {
     "path": "/db/collection-stats",
     "method": "GET",
-    "folder": "Server",
+    "folder": "Database",
     "name": "Collection Stats",
     "description": "Get basic stats of a collection: count, file size, lastModified, and inferred schema (field paths and types).",
     "requiresAuth": true,
