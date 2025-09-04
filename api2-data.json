@@ -1,554 +1,5 @@
 [
   {
-    "path": "/db/auth/create",
-    "method": "POST",
-    "folder": "Server",
-    "name": "DB Auth Create",
-    "description": "Create a new API key and an initial database. Database name will be normalized and suffixed with a random 5-character string (e.g., test-ajs61).",
-    "requiresAuth": false,
-    "parameters": {
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "test"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "API key and database created",
-        "apiKey": "AbCdEf...token",
-        "db": "test-ajs61"
-      }
-    }
-  },
-  {
-    "path": "/db/list",
-    "method": "GET",
-    "folder": "Server",
-    "name": "DB List",
-    "description": "List all databases owned by the authenticated user.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Databases listed",
-        "databases": [
-          {
-            "name": "test-ajs61",
-            "collections": [
-              "user"
-            ],
-            "createdAt": "2025-01-01T00:00:00Z",
-            "exists": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "path": "/db/create",
-    "method": "POST",
-    "folder": "Server",
-    "name": "DB Create",
-    "description": "Create an additional database for the authenticated user. The actual db folder will append a random 5-char suffix.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>",
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "project"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Database created",
-        "db": "project-k3s9a"
-      }
-    }
-  },
-  {
-    "path": "/db/delete",
-    "method": "POST",
-    "folder": "Server",
-    "name": "DB Delete",
-    "description": "Delete a specific database owned by the authenticated user.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>",
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "test-ajs61"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Database deleted",
-        "db": "test-ajs61"
-      }
-    }
-  },
-  {
-    "path": "/db/auth/edit",
-    "method": "POST",
-    "folder": "Server",
-    "name": "Auth Edit (Metadata)",
-    "description": "Edit auth metadata for the user. Typically to register/unregister collection names under a DB in auth metadata.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>",
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "test-ajs61",
-          "addCollection": "user",
-          "removeCollection": "logs"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Auth metadata updated",
-        "databases": {
-          "test-ajs61": {
-            "name": "test-ajs61",
-            "collections": [
-              "user"
-            ],
-            "createdAt": "2025-01-01T00:00:00Z"
-          }
-        }
-      }
-    }
-  },
-  {
-    "path": "/db/auth/delete",
-    "method": "POST",
-    "folder": "Server",
-    "name": "Auth Delete (Purge User)",
-    "description": "Delete all data owned by the authenticated user (all DBs) and remove the user from auth storage.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "All user data deleted"
-      }
-    }
-  },
-  {
-    "path": "/db/collection/list",
-    "method": "GET",
-    "folder": "Server",
-    "name": "Collection List",
-    "description": "List collections for a specific database (from metadata and actual files).",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>"
-      },
-      "query": {
-        "db": "test-ajs61"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Collections listed",
-        "db": "test-ajs61",
-        "collections": [
-          {
-            "name": "user",
-            "exists": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "path": "/db/collection/create",
-    "method": "POST",
-    "folder": "Server",
-    "name": "Collection Create",
-    "description": "Create a collection (JSON file) under a specific database.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>",
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "test-ajs61",
-          "collection": "user"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Collection created",
-        "db": "test-ajs61",
-        "collection": "user"
-      }
-    }
-  },
-  {
-    "path": "/db/collection/delete",
-    "method": "POST",
-    "folder": "Server",
-    "name": "Collection Delete",
-    "description": "Delete a collection JSON file and remove it from metadata.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>",
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "test-ajs61",
-          "collection": "user"
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Collection deleted",
-        "db": "test-ajs61",
-        "collection": "user"
-      }
-    }
-  },
-  {
-    "path": "/db/collection/edit",
-    "method": "POST",
-    "folder": "Server",
-    "name": "Collection Insert/Update",
-    "description": "Insert a new document or update an existing document by _id. Supports typed values using {\"$type\",\"$value\"} (types: string, boolean, object, array, int32, int64, date, timestamp, binary, null, undefined). No hard delete; update fields instead.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>",
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "test-ajs61",
-          "collection": "user",
-          "action": "insert",
-          "document": {
-            "name": "iky",
-            "login": {
-              "$type": "boolean",
-              "$value": true
-            }
-          },
-          "id": "only-for-update",
-          "patch": {
-            "login": {
-              "$type": "string",
-              "$value": "ok"
-            },
-            "test": {
-              "nested": 1
-            }
-          }
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Document inserted",
-        "document": {
-          "_id": "64b1f7e0e4d3bc2cfe1a2b33",
-          "name": "iky",
-          "login": true,
-          "createdAt": "2025-01-01T00:00:00Z",
-          "updatedAt": "2025-01-01T00:00:00Z"
-        }
-      }
-    }
-  },
-  {
-    "path": "/db/collection/get",
-    "method": "GET",
-    "folder": "Server",
-    "name": "Collection Get",
-    "description": "Get a single document by _id or list documents with pagination, sorting, and projection. For GET, projection can be sent as a JSON object in query or omitted.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>"
-      },
-      "query": {
-        "db": "test-ajs61",
-        "collection": "user",
-        "id": "",
-        "limit": 50,
-        "skip": 0,
-        "sortBy": "createdAt",
-        "sortOrder": "desc",
-        "projection": {
-          "password": 0
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Documents listed",
-        "db": "test-ajs61",
-        "collection": "user",
-        "total": 1,
-        "skip": 0,
-        "limit": 50,
-        "documents": [
-          {
-            "_id": "64b1f7e0e4d3bc2cfe1a2b33",
-            "name": "iky",
-            "login": true,
-            "createdAt": "2025-01-01T00:00:00Z",
-            "updatedAt": "2025-01-01T00:00:00Z"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "path": "/db/collection/get",
-    "method": "POST",
-    "folder": "Server",
-    "name": "Collection Get (POST)",
-    "description": "Same as Collection Get but using JSON body for complex projection.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>",
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "test-ajs61",
-          "collection": "user",
-          "id": "",
-          "limit": 50,
-          "skip": 0,
-          "sortBy": "createdAt",
-          "sortOrder": "desc",
-          "projection": {
-            "password": 0
-          }
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Documents listed",
-        "total": 0,
-        "documents": []
-      }
-    }
-  },
-  {
-    "path": "/db/collection/find",
-    "method": "GET",
-    "folder": "Server",
-    "name": "Collection Find",
-    "description": "Advanced search with filter, projection, sorting, and pagination. Supports operators: $eq, $ne, $gt, $gte, $lt, $lte, $in, $nin, $exists, $regex and logical $and, $or, $nor, $not. Dot-notation allowed.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>"
-      },
-      "query": {
-        "db": "test-ajs61",
-        "collection": "user",
-        "filter": {
-          "$or": [
-            {
-              "role": "admin"
-            },
-            {
-              "active": true
-            }
-          ],
-          "age": {
-            "$gte": 18
-          },
-          "name": {
-            "$regex": "^ik",
-            "options": "i"
-          }
-        },
-        "projection": {
-          "password": 0
-        },
-        "sort": {
-          "updatedAt": -1,
-          "_id": 1
-        },
-        "limit": 50,
-        "skip": 0
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Find completed",
-        "matched": 1,
-        "skip": 0,
-        "limit": 50,
-        "documents": [
-          {
-            "_id": "64b1f7e0e4d3bc2cfe1a2b33",
-            "name": "iky",
-            "role": "admin",
-            "active": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "path": "/db/collection/find",
-    "method": "POST",
-    "folder": "Server",
-    "name": "Collection Find (POST)",
-    "description": "Same as Collection Find but using JSON body for complex filters.",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>",
-        "Content-Type": "application/json"
-      },
-      "body": {
-        "type": "raw",
-        "fields": {
-          "db": "test-ajs61",
-          "collection": "user",
-          "filter": {
-            "$and": [
-              {
-                "age": {
-                  "$gte": 18
-                }
-              },
-              {
-                "$or": [
-                  {
-                    "role": "admin"
-                  },
-                  {
-                    "active": true
-                  }
-                ]
-              }
-            ]
-          },
-          "projection": {
-            "password": 0
-          },
-          "sort": {
-            "updatedAt": -1
-          },
-          "limit": 50,
-          "skip": 0
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Find completed",
-        "matched": 0,
-        "documents": []
-      }
-    }
-  },
-  {
-    "path": "/db/collection/stats",
-    "method": "GET",
-    "folder": "Server",
-    "name": "Collection Stats",
-    "description": "Get basic stats of a collection: count, file size, lastModified, and inferred schema (field paths and types).",
-    "requiresAuth": true,
-    "parameters": {
-      "headers": {
-        "Authorization": "Bearer <apiKey>"
-      },
-      "query": {
-        "db": "test-ajs61",
-        "collection": "user"
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {
-        "message": "Collection stats",
-        "db": "test-ajs61",
-        "collection": "user",
-        "count": 12,
-        "fileSize": 4096,
-        "lastModified": "2025-01-01T00:00:00Z",
-        "schema": {
-          "_id": [
-            "string"
-          ],
-          "name": [
-            "string"
-          ],
-          "login": [
-            "boolean"
-          ],
-          "createdAt": [
-            "string"
-          ],
-          "updatedAt": [
-            "string"
-          ]
-        }
-      }
-    }
-  },
-
-  {
     "path": "/ai/gpt4",
     "method": "POST",
     "folder": "AI",
@@ -738,9 +189,452 @@
     }
   },
   {
+    "path": "/db/auth-create",
+    "method": "POST",
+    "folder": "Database",
+    "name": "DB Auth Create",
+    "description": "Create a new API key and an initial database. Database name will be normalized and suffixed with a random 5-character string (e.g., test-ajs61).",
+    "requiresAuth": false,
+    "parameters": {
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "test"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "API key and database created",
+        "apiKey": "AbCdEf...token",
+        "db": "test-ajs61"
+      }
+    }
+  },
+  {
+    "path": "/db/list",
+    "method": "GET",
+    "folder": "Database",
+    "name": "DB List",
+    "description": "List all databases owned by the authenticated user.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Databases listed",
+        "databases": [
+          {
+            "name": "test-ajs61",
+            "collections": [
+              "user"
+            ],
+            "createdAt": "2025-01-01T00:00:00Z",
+            "exists": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/db/create",
+    "method": "POST",
+    "folder": "Database",
+    "name": "DB Create",
+    "description": "Create an additional database for the authenticated user. The actual db folder will append a random 5-char suffix.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "project"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Database created",
+        "db": "project-k3s9a"
+      }
+    }
+  },
+  {
+    "path": "/db/delete",
+    "method": "POST",
+    "folder": "Database",
+    "name": "DB Delete",
+    "description": "Delete a specific database owned by the authenticated user.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "test-ajs61"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Database deleted",
+        "db": "test-ajs61"
+      }
+    }
+  },
+  {
+    "path": "/db/auth-edit",
+    "method": "POST",
+    "folder": "Database",
+    "name": "Auth Edit (Metadata)",
+    "description": "Edit auth metadata for the user. Typically to register/unregister collection names under a DB in auth metadata.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "test-ajs61",
+          "addCollection": "user",
+          "removeCollection": "logs"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Auth metadata updated",
+        "databases": {
+          "test-ajs61": {
+            "name": "test-ajs61",
+            "collections": [
+              "user"
+            ],
+            "createdAt": "2025-01-01T00:00:00Z"
+          }
+        }
+      }
+    }
+  },
+  {
+    "path": "/db/auth-delete",
+    "method": "POST",
+    "folder": "Database",
+    "name": "Auth Delete (Purge User)",
+    "description": "Delete all data owned by the authenticated user (all DBs) and remove the user from auth storage.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "All user data deleted"
+      }
+    }
+  },
+  {
+    "path": "/db/collection-list",
+    "method": "GET",
+    "folder": "Database",
+    "name": "Collection List",
+    "description": "List collections for a specific database (from metadata and actual files).",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>"
+      },
+      "query": {
+        "db": "test-ajs61"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Collections listed",
+        "db": "test-ajs61",
+        "collections": [
+          {
+            "name": "user",
+            "exists": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/db/collection-create",
+    "method": "POST",
+    "folder": "Database",
+    "name": "Collection Create",
+    "description": "Create a collection (JSON file) under a specific database.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "test-ajs61",
+          "collection": "user"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Collection created",
+        "db": "test-ajs61",
+        "collection": "user"
+      }
+    }
+  },
+  {
+    "path": "/db/collection-delete",
+    "method": "POST",
+    "folder": "Database",
+    "name": "Collection Delete",
+    "description": "Delete a collection JSON file and remove it from metadata.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "test-ajs61",
+          "collection": "user"
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Collection deleted",
+        "db": "test-ajs61",
+        "collection": "user"
+      }
+    }
+  },
+  {
+    "path": "/db/collection-edit",
+    "method": "POST",
+    "folder": "Database",
+    "name": "Collection Insert/Update",
+    "description": "Insert a new document or update an existing document by _id. Supports typed values using {\"$type\",\"$value\"} (types: string, boolean, object, array, int32, int64, date, timestamp, binary, null, undefined). No hard delete; update fields instead.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "test-ajs61",
+          "collection": "user",
+          "action": "insert",
+          "document": {
+            "name": "iky",
+            "login": {
+              "$type": "boolean",
+              "$value": true
+            }
+          },
+          "id": "only-for-update",
+          "patch": {
+            "login": {
+              "$type": "string",
+              "$value": "ok"
+            },
+            "test": {
+              "nested": 1
+            }
+          }
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Document inserted",
+        "document": {
+          "_id": "64b1f7e0e4d3bc2cfe1a2b33",
+          "name": "iky",
+          "login": true,
+          "createdAt": "2025-01-01T00:00:00Z",
+          "updatedAt": "2025-01-01T00:00:00Z"
+        }
+      }
+    }
+  },
+  {
+    "path": "/db/collection-get",
+    "method": "POST",
+    "folder": "Database",
+    "name": "Collection Get",
+    "description": "Same as Collection Get but using JSON body for complex projection.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "test-ajs61",
+          "collection": "user",
+          "id": "",
+          "limit": 50,
+          "skip": 0,
+          "sortBy": "createdAt",
+          "sortOrder": "desc",
+          "projection": {
+            "password": 0
+          }
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Documents listed",
+        "total": 0,
+        "documents": []
+      }
+    }
+  },
+  {
+    "path": "/db/collection-find",
+    "method": "POST",
+    "folder": "Server",
+    "name": "Collection Find",
+    "description": "Same as Collection Find but using JSON body for complex filters.",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "type": "raw",
+        "fields": {
+          "db": "test-ajs61",
+          "collection": "user",
+          "filter": {
+            "$and": [
+              {
+                "age": {
+                  "$gte": 18
+                }
+              },
+              {
+                "$or": [
+                  {
+                    "role": "admin"
+                  },
+                  {
+                    "active": true
+                  }
+                ]
+              }
+            ]
+          },
+          "projection": {
+            "password": 0
+          },
+          "sort": {
+            "updatedAt": -1
+          },
+          "limit": 50,
+          "skip": 0
+        }
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Find completed",
+        "matched": 0,
+        "documents": []
+      }
+    }
+  },
+  {
+    "path": "/db/collection-stats",
+    "method": "GET",
+    "folder": "Server",
+    "name": "Collection Stats",
+    "description": "Get basic stats of a collection: count, file size, lastModified, and inferred schema (field paths and types).",
+    "requiresAuth": true,
+    "parameters": {
+      "headers": {
+        "Authorization": "Bearer <apiKey>"
+      },
+      "query": {
+        "db": "test-ajs61",
+        "collection": "user"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "message": "Collection stats",
+        "db": "test-ajs61",
+        "collection": "user",
+        "count": 12,
+        "fileSize": 4096,
+        "lastModified": "2025-01-01T00:00:00Z",
+        "schema": {
+          "_id": [
+            "string"
+          ],
+          "name": [
+            "string"
+          ],
+          "login": [
+            "boolean"
+          ],
+          "createdAt": [
+            "string"
+          ],
+          "updatedAt": [
+            "string"
+          ]
+        }
+      }
+    }
+  },
+  {
     "path": "/data/bot-server",
     "method": "GET",
-    "folder": "Service",
+    "folder": "Server",
     "name": "Bot Server",
     "description": "Check active bot server",
     "requiresAuth": false,
@@ -752,7 +646,7 @@
   {
     "path": "/data/server",
     "method": "GET",
-    "folder": "Service",
+    "folder": "Server",
     "name": "Web Server",
     "description": "Check website server status",
     "requiresAuth": false,
@@ -764,7 +658,7 @@
   {
     "path": "/data/data",
     "method": "GET",
-    "folder": "Service",
+    "folder": "Server",
     "name": "Api Path",
     "description": "Bruh...",
     "requiresAuth": false,
