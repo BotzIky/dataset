@@ -81,25 +81,6 @@
     }
   },
   {
-    "path": "/download/youtube",
-    "method": "GET",
-    "folder": "Downloader",
-    "name": "YouTube Downloader",
-    "description": "YouTube Video/Audio Downloader, format default 720, available format video (360, 480, 720, 1080), available format audio (mp3, m4a, webm, aac, opus), audio quality default 128",
-    "requiresAuth": false,
-    "parameters": {
-      "query": {
-        "url": "https://youtube.com/shorts/-rdR9_eGT9c?si=xCGksrqIrXCja7J7",
-        "format": "720",
-        "progressId": ""
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
     "path": "/download/pinterest",
     "method": "GET",
     "folder": "Downloader",
