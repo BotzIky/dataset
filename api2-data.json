@@ -209,6 +209,24 @@
     }
   },
   {
+    "path": "/tools/check-host",
+    "method": "GET",
+    "folder": "Tools",
+    "name": "Check Host",
+    "description": "Check Host Domain, Available types: (ping, http, tcp, udp, dns, info)",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "host": "https://api.botzaku.eu.org",
+        "type": "http"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/db/auth-create",
     "method": "POST",
     "folder": "Database",
