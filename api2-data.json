@@ -98,6 +98,24 @@
     }
   },
   {
+    "path": "/download/youtube",
+    "method": "GET",
+    "folder": "Downloader",
+    "name": "YouTube Downloader",
+    "description": "YouTube Video/Audio Downloader, (Available format: mp3, 144, 240, 360, 480, 720, 1080)",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://youtube.com/shorts/e7DopmkFVZ8?si=W_x2_qyfyUkWPC40",
+        "format": "mp3"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/tools/translate",
     "method": "GET",
     "folder": "Tools",
