@@ -10,7 +10,7 @@
       "body": {
         "type": "raw",
         "fields": {
-          "prompt": "cat walking"
+          "prompt": "cat walking",
           "image": ""
         }
       }
