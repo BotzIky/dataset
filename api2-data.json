@@ -227,6 +227,41 @@
     }
   },
   {
+    "path": "/tools/tempmail",
+    "method": "GET",
+    "folder": "Tools",
+    "name": "Tempmail Create",
+    "description": "Create a temporary email",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "action": "create"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/tools/tempmail",
+    "method": "GET",
+    "folder": "Tools",
+    "name": "Check Inbox Tempmail",
+    "description": "Check your temporary email inbox",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "action": "inbox",
+        "token": ""
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/db/auth-create",
     "method": "POST",
     "folder": "Database",
