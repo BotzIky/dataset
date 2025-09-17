@@ -209,6 +209,33 @@
     }
   },
   {
+    "path": "/tools/upscaling",
+    "method": "GET",
+    "folder": "Tools",
+    "name": "Image Upscaling",
+    "description": "Upscale and enhance image quality from a given URL without requiring API keys. The processed image is uploaded to a remote storage and the URL is returned.",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "url": "https://cdn.botzaku.eu.org/1KycshkqUuNHDTBKW3E6NPFtydlw9T0WR"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "success": true,
+        "message": "Image upscaled successfully",
+        "data": {
+          "original_url": "https://example.com/image.jpg",
+          "upscaled_url": "https://cdn.botzaku.eu.org/1UyLlFY84-xF9ET-YXcPBLPDzG4XVFTpr",
+          "upscaled_size": 17884,
+          "filename": "upscaled_1234567890.jpg",
+          "timestamp": "2025-09-17 09:00:00"
+        }
+      }
+    }
+  }, 
+  {
     "path": "/tools/check-host",
     "method": "GET",
     "folder": "Tools",
