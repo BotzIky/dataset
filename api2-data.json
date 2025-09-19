@@ -232,7 +232,7 @@
     }
   },
   {
-    "path": "/tools/domain-imfo",
+    "path": "/tools/domain-info",
     "method": "GET",
     "folder": "Tools",
     "name": "Domain Information",
