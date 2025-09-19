@@ -303,14 +303,17 @@
   },
   {
     "path": "/whatsapp/check",
-    "method": "GET",
+    "method": "POST",
     "folder": "WhatsApp",
     "name": "WhatsApp Checker",
     "description": "Is the number a WhatsApp number?",
     "requiresAuth": false,
     "parameters": {
-      "query": {
-        "number": "6281234567890"
+      "body": {
+        "type": "raw",
+        "fields": {
+          "number": "6281234567890"
+        }
       }
     },
     "response": {
