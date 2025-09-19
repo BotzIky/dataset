@@ -215,6 +215,40 @@
     }
   }, 
   {
+    "path": "/tools/subfinder",
+    "method": "GET",
+    "folder": "Tools",
+    "name": "Sub Domain Finder",
+    "description": "Look for sub domains from the main domain",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "domain": "botzaku.eu.org"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/tools/domain-imfo",
+    "method": "GET",
+    "folder": "Tools",
+    "name": "Domain Information",
+    "description": "Domain and sub domain information",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "domain": "botzaku.eu.org"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
     "path": "/tools/check-host",
     "method": "GET",
     "folder": "Tools",
@@ -260,6 +294,45 @@
       "query": {
         "action": "check",
         "token": ""
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/whatsapp/check",
+    "method": "GET",
+    "folder": "WhatsApp",
+    "name": "WhatsApp Checker",
+    "description": "Is the number a WhatsApp number?",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "number": "6281234567890"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {}
+    }
+  },
+  {
+    "path": "/whatsapp/otp",
+    "method": "POST",
+    "folder": "WhatsApp",
+    "name": "Send OTP to WhatsApp",
+    "description": "Authentication using WhatsApp number",
+    "requiresAuth": false,
+    "parameters": {
+      "body": {
+        "type": "raw",
+        "fields": {
+          "header": "Verification Code",
+          "number": "6281234567890",
+          "footer": "Please do not share this code with anyone."
+        }
       }
     },
     "response": {
