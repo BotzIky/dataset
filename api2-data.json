@@ -1,26 +1,5 @@
 [
   {
-    "path": "/ai/veo3-fast",
-    "method": "POST",
-    "folder": "AI",
-    "name": "VEO 3 Fast",
-    "description": "Access VEO 3 AI model for generate video",
-    "requiresAuth": false,
-    "parameters": {
-      "body": {
-        "type": "raw",
-        "fields": {
-          "prompt": "cat walking",
-          "image": ""
-        }
-      }
-    },
-    "response": {
-      "type": "json",
-      "example": {}
-    }
-  },
-  {
     "path": "/ai/gpt4",
     "method": "POST",
     "folder": "AI",
