@@ -305,7 +305,7 @@
     "path": "/whatsapp/check",
     "method": "POST",
     "folder": "WhatsApp",
-    "name": "WhatsApp Checker",
+    "name": "WhatsApp Checker (inactive)",
     "description": "Is the number a WhatsApp number?",
     "requiresAuth": false,
     "parameters": {
@@ -325,7 +325,7 @@
     "path": "/whatsapp/otp",
     "method": "POST",
     "folder": "WhatsApp",
-    "name": "Send OTP to WhatsApp",
+    "name": "Send OTP to WhatsApp (inactive)",
     "description": "Authentication using WhatsApp number",
     "requiresAuth": false,
     "parameters": {
