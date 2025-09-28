@@ -30,6 +30,25 @@
     }
   },
   {
+    "path": "/ai/perplexity",
+    "method": "GET",
+    "folder": "AI",
+    "name": "Perplexity",
+    "description": "Access Perplexity AI model for chat completion",
+    "requiresAuth": false,
+    "parameters": {
+      "query": {
+        "prompt": "Presiden Indonesia Sekarang"
+      }
+    },
+    "response": {
+      "type": "json",
+      "example": {
+        "response": "Prabowo Subianto"
+      }
+    }
+  },
+  {
     "path": "/download/facebook",
     "method": "GET",
     "folder": "Downloader",
